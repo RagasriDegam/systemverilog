@@ -11,7 +11,7 @@ endfunction
 forever begin
 mon2sbd.get(tx);
   tx.print("sbd");
-  exp=tx.a || tx.b;
+  exp=tx.a && tx.b;
   if(tx.c ==exp)
     $display("pass");
   else
